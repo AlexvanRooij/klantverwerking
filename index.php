@@ -12,7 +12,7 @@ if(!empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["oms"])) {
         $mail->Host       = 'alexvanrooij.nl';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'contact@alexvanrooij.nl';
-        $mail->Password   = '0409-DerpAlex!';
+        $mail->Password   = 'x';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
