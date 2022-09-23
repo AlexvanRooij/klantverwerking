@@ -25,9 +25,9 @@ if(!empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["oms"])) {
         $mail->addCC('alex.rooij@icloud.com');
 
         $mail->isHTML(true);
-        $mail->Subject = $_POST["oms"];
-        $mail->Body    = 'temp';
-        $mail->AltBody = 'temp';
+        $mail->Subject = 'Uw klacht is in behandeling';
+        $mail->Body    = $_POST["oms"];
+        $mail->AltBody = 'hey sexy';
 
         $mail->send();
         
