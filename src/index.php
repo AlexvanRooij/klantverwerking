@@ -1,5 +1,6 @@
 <?php
-session_start();
+require_once('../vendor/autoload.php');
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -7,8 +8,6 @@ use PHPMailer\PHPMailer\Exception;
 use Monolog\Level;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
-
-require_once('vendor/autoload.php');
 
 if(!empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["oms"])) {
     $mail = new PHPMailer(true);
