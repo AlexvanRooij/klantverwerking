@@ -47,5 +47,5 @@ if(!empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["oms"])) {
     <input type="text" name="name" placeholder="name">
     <input type="email" name="email" placeholder="email">
     <input type="text" name="oms" placeholder="message">
-    <button type="submit">
+    <button type="submit">SUBMIT</button>
 </form>
