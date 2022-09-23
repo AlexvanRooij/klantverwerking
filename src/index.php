@@ -9,6 +9,8 @@ use Monolog\Level;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
+include('../config.php');
+
 if(!empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["oms"])) {
     $mail = new PHPMailer(true);
     try {
@@ -16,7 +18,7 @@ if(!empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["oms"])) {
         $mail->Host       = 'alexvanrooij.nl';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'contact@alexvanrooij.nl';
-        $mail->Password   = '0409-DerpAlex!';
+        $mail->Password   = $password;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
